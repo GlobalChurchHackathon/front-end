@@ -1,22 +1,30 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import Card from 'react-bootstrap/Card';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 export default class Login extends Component {
     render() {
         return (
             <div>
-                <Form inline className="login-form">
+                <Card>
                     <h1>Log In</h1>
-                    <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                        <Label for="email" className="mr-sm-2">Email</Label>
-                        <Input type="email" name="email" id="email" placeholder="email" />
-                    </FormGroup>
-                    <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                        <Label for="password" className="mr-sm-2">Password</Label>
-                        <Input type="password" name="password" id="password" placeholder="Password" />
-                    </FormGroup>
-                    <Button style={{background: "green"}}>Submit</Button>
-                </Form>
+                    <Card.Body>
+                        <Form>
+                            <Form.Group controlId="formBasicEmail">
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control type="email" placeholder="Email" />
+                            </Form.Group>
+                            <Form.Group controlId="formBasicPassword">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="password" placeholder="Password" />
+                            </Form.Group>
+                            <Button variant="primary" type="submit">
+                                Submit
+                            </Button>
+                        </Form>
+                    </Card.Body>
+                </Card>
             </div>
         )
     }
