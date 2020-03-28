@@ -1,31 +1,19 @@
-import React from 'react';
-import { Nav, Card } from 'react-bootstrap';
+import React from 'react'
+import { Link } from 'react-router-dom';
 
-
-//will need to import Link to for navigation and router
-
-export default function Navigation() {
+const Navigation = () => {
     return (
-        //color themes can alway be changed later
-        <div >
-            <Card border="dark" >
-                <Card.Body>
-                    <Nav className="justify-content-center" activeKey="/home">
-                        <Nav.Item>
-                            <Nav.Link href="/home">Home</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="link-1">Sign up</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="link-2">Login</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="link-2">Find a Church?</Nav.Link>
-                        </Nav.Item>
-                    </Nav>
-                </Card.Body>
-            </Card>
-        </div>
-    );
+        <nav className="navbar bg-dark">
+            <h1>
+                <Link to='/'><i className="fas fa-code" />In the Midst</Link>
+            </h1>
+            <ul>
+                <li><Link to='!#'>Home</Link></li>
+                <li><Link to='/login'>Login</Link></li>
+                <li><Link to='/registerUser'>Register</Link></li>
+            </ul>
+        </nav >
+    )
 }
+
+export default Navigation
