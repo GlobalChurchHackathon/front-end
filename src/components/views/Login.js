@@ -1,31 +1,61 @@
-import React, { Component } from 'react';
-import Card from 'react-bootstrap/Card';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import React, { Fragment, useState } from 'react'
+import { Container, Row, Col } from 'react-bootstrap';
+// import { Link } from 'react-router-dom';
+// import axios from 'axios';
 
-export default class Login extends Component {
-    render() {
-        return (
-            <div>
-                <Card>
-                    <h1>Log In</h1>
-                    <Card.Body>
-                        <Form>
-                            <Form.Group controlId="formBasicEmail">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control type="email" placeholder="Email" />
-                            </Form.Group>
-                            <Form.Group controlId="formBasicPassword">
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="Password" />
-                            </Form.Group>
-                            <Button variant="primary" type="submit">
-                                Submit
-                            </Button>
-                        </Form>
-                    </Card.Body>
-                </Card>
-            </div>
-        )
+//function component w/hooks
+const Login = () => {
+    const [formData, setFormData] = useState({
+        email: '',
+        password: ''
+    });
+    const { email, password } = formData;
+    const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
+    const onSubmit = async e => {
+        e.preventDefault();
+        console.log('success');
     }
-};
+    return (
+        <Fragment>
+            <Container fluid='sm'>
+                <Row>
+                    <Col>
+                        <h1 className="large text-primary">Log In</h1>
+                        <p className="lead">Log into you account</p>
+                        <form className="form" onSubmit={e => onSubmit(e)}>
+                            <div className="form-group">
+                                <input type="email"
+                                    placeholder="Email Address"
+                                    name="email"
+                                    value={email}
+                                    onChange={e => onChange(e)}
+                                    onFocus={(e) => e.target.placeholder = ""}
+                                    onBlur={(e) => e.target.placeholder = "Email Address"}
+                                    required
+                                />
+                            </div>
+                            <div className="form-group">
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    name="password"
+                                    value={password}
+                                    onChange={e => onChange(e)}
+                                    minLength="8"
+                                    onFocus={(e) => e.target.placeholder = ""}
+                                    onBlur={(e) => e.target.placeholder = "Password"}
+                                    required
+                                />
+                            </div>
+                            <input type="submit" className="btn btn-primary" value="Login" />
+                        </form>
+                        <p className="my-1">
+                            {/* Already have an account? <Link to='/register'>Log In</Link> */}
+                        </p>
+                    </Col>
+                </Row>
+            </Container>
+        </Fragment >
+    )
+}
+export default Login;
