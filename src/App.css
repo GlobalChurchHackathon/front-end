@@ -1,3 +1,30 @@
+/* Home Styles
+#home-body{
+    background-image: url('https://images.pexels.com/photos/289613/pexels-photo-289613.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    height: 100vh;
+    width: auto;
+
+}
+#jumbo{
+    background-color: white;
+    opacity: 70%;
+  
+    
+}
+#jumbo:hover{
+    background-color: antiquewhite;
+    opacity: 90%;
+}
+#present{
+    height: 24vh;
+}
+.card{
+    opacity: 80%;
+}
+.card:hover{
+    opacity: 90%;
+} */
+
 /* Global Styles */
 :root {
   --primary-color: #17a2b8;
@@ -331,9 +358,9 @@ button {
 }
 
 /* Landing Page */
-.landing {
+/* .landing {
   position: relative;
-  /* background: url('./components/img/showcaseTwo.jpg') no-repeat center center/cover; */
+  background: url('https://images.pexels.com/photos/289613/pexels-photo-289613.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260') no-repeat center center/cover;
   height: 100vh;
 }
 
@@ -347,6 +374,35 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+} */
+
+#home-body{
+    margin-top: 0px;
+    padding-top: 0px;
+    position: relative;
+    background-image: url('./components/assests/pexels-photo-1172849.jpeg');
+    height: 150vh;
+
+}
+#jumbo{
+    margin-top: 86px;
+    background-color: white;
+    opacity: 70%;
+  
+    
+}
+#jumbo:hover{
+    background-color: antiquewhite;
+    opacity: 90%;
+}
+#present{
+    height: 24vh;
+}
+.card{
+    opacity: 90%;
+}
+.card:hover{
+    opacity: 100%;
 }
 
 /* Profiles Page */
@@ -510,8 +566,8 @@ button {
   .lead {
     font-size: 1rem;
   }
-
-  /* Navbar */
+/* 
+  Navbar
   .navbar {
     display: block;
     text-align: center;
@@ -522,13 +578,13 @@ button {
     justify-content: center;
   }
 
-  .navbar h1 {
+  /* .navbar h1 {
     margin-bottom: 1rem;
-  }
+  } */
 
   .navbar .welcome {
     display: none;
-  }
+  } */
 
   /* Profiles Page */
   .profile {
