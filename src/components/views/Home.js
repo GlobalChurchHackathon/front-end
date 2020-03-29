@@ -1,6 +1,10 @@
 import React from 'react';
 import { Container, Jumbotron, Card, Col, Row } from 'react-bootstrap';
-export default function Home() {
+
+//conditional rendering needs to be implemented
+//a guest will see less or different things than a logged in user will see
+
+const Home = () => {
     return (
         <div id="home-body">
             <hr class="my-1"></hr>
@@ -42,6 +46,6 @@ export default function Home() {
         </div>
     );
 }
-export { Home };
+export default Home;
 
 
