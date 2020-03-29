@@ -16,34 +16,15 @@ const Register = () => {
     const { firstName, lastName, email, password, password2 } = formData;
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
 
-    const onSubmit = async e => {
-        e.preventDefault();
-        if (password !== password2) {
-            console.log('passwords do not match')
-        } else {
-            console.log(formData);
-            const newUser = {
-                firstName,
-                lastName,
-                email,
-                password
-            }
-            try {
-                const config = {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                }
-
-                const body = JSON.stringify(newUser);
-
-                const res = await axios.post('/api/users', body, config);
-                console.log(res.data);
-            } catch (err) {
-                console.error(err.response.data);
-            }
-        }
-
+    const onSubmit = (e) => {
+        e.preventDefault()
+        axios.post('http://localhost:4000/users', formData)
+            .then(function (response) {
+                console.log(response)
+            })
+            .catch(function (error) {
+                console.log(error)
+            })
     }
     return (
 
