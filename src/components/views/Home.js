@@ -3,8 +3,8 @@ import { Container, Jumbotron, Card, Col, Row } from 'react-bootstrap';
 export default function Home() {
     return (
         <div id="home-body">
-
-            <Container >
+            <hr class="my-1"></hr>
+            <Container>
                 <Jumbotron id="jumbo">
                     <h1 class="display-3 text-center">IN|THE|MIDST</h1>
                     <p class="lead">Created to supply those in need with essential items through neighboring churches and communities </p>
