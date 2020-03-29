@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-// import Landing from './components/layout/Landing';
+import Home from './components/views/Home'
+// import Landing from './components/layout/Landing';;
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/layouts/Navigation';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login'
-
 import './App.css';
 
 
@@ -13,7 +13,7 @@ const App = () => (
   <Router>
     <Fragment>
       <Navigation />
-      {/* <Route exact path='/' component={Landing} /> */}
+      <Route exact path='/' component={Home} />
       <section className='container'>
         <Switch>
           <Route exact path='/login' component={Login} />
