@@ -17,7 +17,8 @@ const Login = () => {
     }
     return (
         <Fragment>
-            <Container fluid='sm'>
+            <Container fluid='sm' className="loginBody">
+                 {/* added className to the container to make a page height in App.css */}
                 <Row>
                     <Col>
                         <h1 className="large text-primary">Log In</h1>

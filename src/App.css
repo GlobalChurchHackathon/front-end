@@ -71,6 +71,36 @@ img {
   margin-bottom: 3rem;
 }
 
+.footer {
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  position: fixed-bottom;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  border-bottom: solid 1px var(--primary-color);
+  opacity: 0.9;
+}
+.footer a {
+ color: #fff;
+}
+.footer a:hover {
+  color: var(--primary-color);
+}
+.footerTitle{
+  margin-bottom: 25px;
+}
+/* This height is here so that the footer sits on the bottom of the page -Sean */
+.loginBody{
+  height: 65vh;
+}
+/* This height is here so that the footer sits on the bottom of the page -Sean */
+.registerBody{
+  height: 65vh;
+}
+
 /* Text Styles*/
 .x-large {
   font-size: 4rem;
@@ -383,6 +413,7 @@ button {
 }
 .card{
     opacity: 90%;
+    
 }
 .card:hover{
     opacity: 100%;

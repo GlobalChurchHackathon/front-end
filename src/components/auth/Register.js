@@ -48,7 +48,8 @@ const Register = () => {
     return (
 
         <Fragment>
-            <Container fluid='sm' >
+            <Container fluid='sm' className="registerBody" >
+                 {/* added className to the container to make a page height in App.css */}
                 <Row>
                     <Col>
                         <h1 className="large text-primary">Sign Up</h1>
