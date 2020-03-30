@@ -7,14 +7,14 @@ import { Container, Jumbotron, Card, Col, Row } from 'react-bootstrap';
 const Home = () => {
     return (
         <div id="home-body">
-            <hr class="my-1"></hr>
+            <hr className="my-1"></hr>
             <Container>
                 <Jumbotron id="jumbo">
-                    <h1 class="display-3 text-center">IN|THE|MIDST</h1>
-                    <p class="lead">Created to supply those in need with essential items through neighboring churches and communities </p>
-                    <hr class="my-1"></hr>
+                    <h1 id="h1" className="display-3 text-center">IN|THE|MIDST</h1>
+                    <p id="jp" class="lead">Created to supply those in need with essential items through neighboring churches and communities </p>
+                    <hr className="my-1"></hr>
                     <p>You can post new needs for yourself or someone you know, post supplies that you have available, or search for supplies that have already been made available.</p>
-                    <p class="lead">
+                    <p className="lead">
                     </p>
                 </Jumbotron>
                 <Row>
@@ -29,8 +29,8 @@ const Home = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md="6">
-                        <Card className="card">
+                    <Col md="6" sm="12">
+                        <Card className="card" id="present">
                             <Card.Img id="present" variant="top" src="https://images.pexels.com/photos/157879/gift-jeans-fashion-pack-157879.jpeg?auto=compress&cs=tinysrgb&h=750&w=940" />
                             <Card.Body>
                                 <Card.Title>Receive without payment</Card.Title>
