@@ -24,7 +24,7 @@ const Home = () => {
                             <Card.Body>
                                 <Card.Title>Giving During Hardship</Card.Title>
                                 <Card.Text>
-                                    In|The|Midst exists to enable churches and individuals to give to people in need in specific ways
+                                    In The Midst exists to enable churches and individuals to give to people in need in specific ways
                                 </Card.Text>
                             </Card.Body>
                         </Card>
