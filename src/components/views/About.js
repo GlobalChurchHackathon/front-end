@@ -1,9 +1,10 @@
 import React from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
+import '../assests/about.css';
 
 const About = () => {
     return (
-        <div>
+        <div id="about-body">
             <Container>
                 <Jumbotron style={{background: "white", opacity: "70%"}}>
                     <h1 className="display-3 text-center">About</h1>
