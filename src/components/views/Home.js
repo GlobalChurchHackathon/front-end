@@ -29,8 +29,8 @@ const Home = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md="6" sm="12">
-                        <Card className="card" id="present">
+                    <Col md="6" id="present">
+                        <Card className="card" >
                             <Card.Img id="present" variant="top" src="https://images.pexels.com/photos/157879/gift-jeans-fashion-pack-157879.jpeg?auto=compress&cs=tinysrgb&h=750&w=940" />
                             <Card.Body>
                                 <Card.Title>Receive without payment</Card.Title>
