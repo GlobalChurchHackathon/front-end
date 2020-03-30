@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-      <Card className="text-center bg-dark footer">
+      <Card id="foot" className="text-center bg-dark footer">
         {/* <Card.Header>Featured</Card.Header> */}
         <Card.Body>
           <Card.Title className="footerTitle" >In the Midst of trouble we will unite and help one another</Card.Title>
