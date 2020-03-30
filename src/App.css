@@ -323,6 +323,7 @@ button {
   top: 0;
   border-bottom: solid 1px var(--primary-color);
   opacity: 0.9;
+
 }
 
 .navbar ul {
@@ -348,20 +349,24 @@ button {
 #home-body{
     margin-top: 0px;
     padding-top: 0px;
-    position: relative;
-    background-image: url('./components/assests/pexels-photo-1172849.jpeg');
-    height: 150vh;
-    background-position: bottom;
-    transform: initial;
+    position: bottom;
+    background-image: url('./components/assests/pexels-photo-1022923.jpeg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
     -webkit-animation: fadein 2s;
     -moz-animation: fadein 3s;
     -ms-animation: fadein 3s; 
     -o-animation: fadein 3s; 
     animation: fadein 3s;
     animation-duration: 3s;
-    clear: both;
     overflow: auto;
+    
 }
+
+
 
 @keyframes fadein {
     from { opacity: 0; }
@@ -384,10 +389,6 @@ button {
     to   { opacity: 1; }
 }
 
-#section{
-  padding:0px;
-  margin: 0px;
-}
 #jumbo{
     margin-top: 86px;
     background-color: white;
@@ -398,16 +399,6 @@ button {
 #jumbo:hover{
     background-color: antiquewhite;
     opacity: 90%;
-}
-#present{
-    height: 29vh;
-}
-.card{
-    opacity: 90%;
-    
-}
-.card:hover{
-    opacity: 100%;
 }
 
 @media screen and (max-width: 568px){
@@ -421,14 +412,14 @@ button {
     font-size: .6em;
     overflow:auto;
     clear: both;
-    display: table;
+    display: inline-block;
   }
 };
-@media screen and (max-width: 771px){
+/* @media screen and (max-width: 771px){
     #present{
       display: none;
     }
-}
+} */
 
 /* Profiles Page */
 .profile {

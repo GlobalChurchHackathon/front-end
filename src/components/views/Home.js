@@ -19,8 +19,8 @@ const Home = () => {
                 </Jumbotron>
                 <Row>
                     <Col md="6">
-                        <Card className="card">
-                            <Card.Img variant="top" src="https://images.pexels.com/photos/296282/pexels-photo-296282.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" />
+                        <Card className="card present">
+                            <Card.Img variant="top" src="https://images.pexels.com/photos/296282/pexels-photo-296282.jpeg?auto=compress&cs=tinysrgb&h=750&w=940" />
                             <Card.Body>
                                 <Card.Title>Giving During Hardship</Card.Title>
                                 <Card.Text>
@@ -29,8 +29,8 @@ const Home = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md="6" id="present">
-                        <Card className="card" >
+                    <Col md="6">
+                        <Card className="card present" >
                             <Card.Img id="present" variant="top" src="https://images.pexels.com/photos/157879/gift-jeans-fashion-pack-157879.jpeg?auto=compress&cs=tinysrgb&h=750&w=940" />
                             <Card.Body>
                                 <Card.Title>Receive without payment</Card.Title>
@@ -40,6 +40,7 @@ const Home = () => {
                             </Card.Body>
                         </Card>
                     </Col>
+
                 </Row>
             </Container>
 
