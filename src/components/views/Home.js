@@ -11,7 +11,7 @@ const Home = () => {
             <Container>
                 <Jumbotron id="jumbo">
                     <h1 id="h1" className="display-3 text-center">IN|THE|MIDST</h1>
-                    <p id="jp" class="lead">Created to supply those in need with essential items through neighboring churches and communities </p>
+                    <p id="jp" className="lead">Created to supply those in need with essential items through neighboring churches and communities </p>
                     <hr className="my-1"></hr>
                     <p>You can post new needs for yourself or someone you know, post supplies that you have available, or search for supplies that have already been made available.</p>
                     <p className="lead">
