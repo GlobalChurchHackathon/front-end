@@ -15,6 +15,7 @@ const Navigation = () => {
                 <li><Link to='/login'>Login</Link></li>
                 <li><Link to='/registerUser'>Register</Link></li>
                 <li><Link to='/requestHelpPage'>Need Help?</Link></li>
+                <li><Link to='/churchRequestBoard'>Requests Board</Link></li>
             </ul>
         </nav >
     );

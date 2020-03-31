@@ -5,7 +5,8 @@ import Footer from './components/layouts/Footer';
 import RequestHelpPage from './components/views/RequestHelpPage';
 import Navigation from './components/layouts/Navigation';
 import Register from './components/auth/Register';
-import Login from './components/auth/Login';
+import Login from './components/auth/Login'
+import ChurchRequestBoard from './components/views/ChurchRequestBoard'
 import About from './components/views/About';
 
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route exact path='/houseHoldItems' component={HouseHoldItems} />
           <Route exact path='/hygiene' component={Hygiene} />
           <Route exact path='/food' component={Food} />
+          <Route exact path='/churchRequestBoard' component={ChurchRequestBoard} />
         </Switch>
       </section>
       <Footer/>
