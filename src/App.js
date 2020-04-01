@@ -8,6 +8,7 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login'
 import ChurchRequestBoard from './components/views/ChurchRequestBoard'
 import About from './components/views/About';
+import Give from './components/views/Give';
 
 
 import HouseHoldItems from './components/views/requestedItems/HouseHoldItems';
@@ -34,6 +35,7 @@ const App = () => (
           <Route exact path='/hygiene' component={Hygiene} />
           <Route exact path='/food' component={Food} />
           <Route exact path='/churchRequestBoard' component={ChurchRequestBoard} />
+          <Route exact path='/give' component={Give} />
         </Switch>
       </section>
       <Footer/>

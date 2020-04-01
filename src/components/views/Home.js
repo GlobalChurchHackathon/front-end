@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Jumbotron, Card, Col, Row } from 'react-bootstrap';
 
+
 //conditional rendering needs to be implemented
 //a guest will see less or different things than a logged in user will see
 
