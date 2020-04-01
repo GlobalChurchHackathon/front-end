@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Button, Container, Jumbotron, Col, Row } from 'react-bootstrap'
+import { Card, Button, Container, Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
 const RequestCards = () => {
