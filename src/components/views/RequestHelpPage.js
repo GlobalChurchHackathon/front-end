@@ -1,16 +1,19 @@
 import React from 'react'
 import RequestCards from '../layouts/RequestCards';
 import { Card } from 'react-bootstrap';
+import '../assests/RequestHelp/RequestHelp.css'
 
 const RequestHelp = () => {
 
 
     return (
-        <Card className='requestHelpPage' border='dark'>
-            <Card.Body>
-                <RequestCards />
+    <div id="about-body">
+        <Card className='requestHelpPage' border='white'>
+            <Card.Body >
+                    <RequestCards />
             </Card.Body>
-        </Card>
+            </Card>
+    </div>
     )
 
 };
