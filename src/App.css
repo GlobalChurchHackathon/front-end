@@ -21,7 +21,8 @@ body {
   color: #333;
   position: relative;
   min-height: 100vh;
-  padding-bottom: 150px;
+  /* adjusted padding fixed gap between body and footer */
+  padding-bottom: 30px;
 }
 
 a {
@@ -55,7 +56,8 @@ img {
   width: 100%;
   border-top: solid 1px var(--primary-color);
   border-bottom: solid 1px var(--primary-color);
-  opacity: 0.9;
+  /* opacity: 0.9; */
+  /* adjusted to hide background */
   position: absolute;
   bottom: 0;
 }
@@ -344,82 +346,6 @@ button {
 .navbar .welcome span {
   margin-right: 0.6rem;
 }
-
-/* home styles */
-#home-body{
-    margin-top: 0px;
-    padding-top: 0px;
-    position: bottom;
-    background-image: url('./components/assests/pexels-photo-1022923.jpeg');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
-    -webkit-animation: fadein 2s;
-    -moz-animation: fadein 3s;
-    -ms-animation: fadein 3s; 
-    -o-animation: fadein 3s; 
-    animation: fadein 3s;
-    animation-duration: 3s;
-    overflow: auto;
-    
-}
-
-
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-#jumbo{
-    margin-top: 86px;
-    background-color: white;
-    opacity: 70%;
-
-    
-}
-#jumbo:hover{
-    background-color: antiquewhite;
-    opacity: 90%;
-}
-
-@media screen and (max-width: 568px){
-  #h1{
-    font-size: 2.3em;
-  }
-  #jp{
-    font-size: 0.8em;
-  }
-  #foot{
-    font-size: .6em;
-    overflow:auto;
-    clear: both;
-    display: inline-block;
-  }
-};
-/* @media screen and (max-width: 771px){
-    #present{
-      display: none;
-    }
-} */
 
 /* Profiles Page */
 .profile {
