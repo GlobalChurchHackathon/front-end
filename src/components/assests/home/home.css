@@ -15,17 +15,36 @@
     animation-duration: 3s;
     overflow: hidden;
     min-height:100vh;
-    
     width:auto;
 }
+.the-cards{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 3rem;
+    -webkit-animation: fadein 4s;
+    -moz-animation: fadein 4s;
+    -ms-animation: fadein 4s; 
+    -o-animation: fadein 4s; 
+    animation: fadein 4s;
+    animation-duration: 4s;
+}
+.the-cards:hover{
+    opacity: 50%;
+    
+}
 
+.fim{
+    padding-bottom: 350px;
+
+}
 .footer{
     z-index: 5;
 
 }
 .info-cards{
-    opacity: 50%;
-    padding-bottom: 160px;
+    opacity: 70%;
+    padding-bottom: 130px;
+    margin-top: 20rem;
 }
 #jumbo2{
     background: none;
@@ -68,7 +87,7 @@
     opacity: 90%;
 }
 
-@media screen and (max-width: 568px){
+@media screen and (max-width: 760px){
   #h1{
     font-size: 2.3em;
   }
@@ -81,4 +100,11 @@
     clear: both;
     display: inline-block;
   }
+    .fim{
+    display:none;
+  }
+  #jumbo2{
+      padding-bottom:50rem;
+  }
 };
+
