@@ -6,7 +6,7 @@ const About = () => {
     return (
         <div id="about-body">
             <Container>
-                <Jumbotron style={{background: "white", opacity: "70%"}}>
+                <Jumbotron style={{ background: "white", opacity: "70%"}}>
                     <h1 className="display-3 text-center">About</h1>
                     <hr className="my-1"></hr>
                     <p>
