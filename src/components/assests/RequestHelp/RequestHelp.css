@@ -1,0 +1,20 @@
+.requestHelpPage {
+  margin-top: 3rem;
+  margin-bottom: 14rem;
+  opacity: 90%;
+}
+#r-body{
+  background-image: url('../home/about-background.png');
+  position: fixed;
+}
+
+.req-cards{
+    opacity: 100%;
+    background-color:white;
+    padding: 3rem;
+}
+#request-body{
+    display: flex;
+    justify-content: space-around;
+}
+
