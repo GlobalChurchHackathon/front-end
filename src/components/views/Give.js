@@ -65,7 +65,8 @@ const Give = () => {
                 </Row>
             </CardDeck>
             {/* still need to add some padding above this text */}
-            <h1 className="display-5 text-center">Your donation goes to the local Church and will help supply the needs of your neighbors.</h1>
+            {/* id added to padd bottom */}
+            <h1 className="display-5 text-center" id="lowerwords">Your donation goes to the local Church and will help supply the needs of your neighbors.</h1>
         </div>
     );
 }
