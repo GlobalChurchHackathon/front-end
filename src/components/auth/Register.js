@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import { Container, Col, Row } from 'react-bootstrap';
 import axios from 'axios';
+import LocationSearchInput from './LocationSearchInput';
 
 //function component w/hooks
 const Register = () => {
@@ -10,11 +11,16 @@ const Register = () => {
         lastName: '',
         email: '',
         password: '',
-        password2: ''
+        password2: '',
+        latLng: {},
+        address: '',
     });
 
-    const { firstName, lastName, email, password, password2 } = formData;
+    const { firstName, lastName, email, password, password2, latLng, address } = formData;
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
+    const onLocationChange = address => setFormData({ ...formData, address })
+
+    const onLocationSelect = ({ latLng, address }) => setFormData({ ...formData, latLng, address })
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -29,7 +35,8 @@ const Register = () => {
     return (
 
         <Fragment>
-            <Container fluid='sm' >
+            <Container fluid='sm' className="registerBody" >
+                {/* added className to the container to make a page height in App.css */}
                 <Row>
                     <Col>
                         <h1 className="large text-primary">Sign Up</h1>
@@ -62,6 +69,11 @@ const Register = () => {
                                     required
                                 />
                             </div>
+                            <LocationSearchInput
+                                onLocationSelect={onLocationSelect}
+                                address={address}
+                                setAddress={onLocationChange}
+                            />
                             <div className="form-group">
                                 <input
                                     type="password"

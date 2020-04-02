@@ -1,6 +1,6 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import axios from 'axios';
 
 //function component w/hooks
@@ -10,18 +10,19 @@ const Login = () => {
         password: ''
     });
     const { email, password } = formData;
-    const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
+    const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
     const onSubmit = async e => {
         e.preventDefault();
         console.log('success');
     }
     return (
         <Fragment>
-            <Container fluid='sm'>
+            <Container fluid='sm' className="loginBody">
+                 {/* added className to the container to make a page height in App.css */}
                 <Row>
                     <Col>
                         <h1 className="large text-primary">Log In</h1>
-                        <p className="lead">Log into you account</p>
+                        <p className="lead">Log in to your account</p>
                         <form className="form" onSubmit={e => onSubmit(e)}>
                             <div className="form-group">
                                 <input type="email"
@@ -50,12 +51,12 @@ const Login = () => {
                             <input type="submit" className="btn btn-primary" value="Login" />
                         </form>
                         <p className="my-1">
-                            {/* Already have an account? <Link to='/register'>Log In</Link> */}
+                            Don't have an account? <Link to='/register'>Sign up</Link>
                         </p>
                     </Col>
                 </Row>
             </Container>
         </Fragment >
-    )
+    );
 }
 export default Login;
