@@ -30,10 +30,10 @@ const RequestCards = () => {
                             <Card.Img variant="top" src={foodImg} />
                             
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
+                                
                                             </Card.Text>
-                            <Button variant="white"><Link to='/hygiene'>Hygiene</Link></Button>
+                            <Button variant="white"><Link to='/food'>Food</Link></Button>
+                            
                         </Card.Body>
                     </Card>
                 </Col>
@@ -43,10 +43,8 @@ const RequestCards = () => {
                         <Card.Body className="req-cards">
                             <Card.Img variant="top" src={HyHo} />
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
                             </Card.Text>
-                            <Button variant="white"><Link to='/food'>Food</Link></Button>
+                            <Button variant="white"><Link to='/hygiene'>Hygiene</Link></Button>
                         </Card.Body>
                     </Card>
                 </Col>

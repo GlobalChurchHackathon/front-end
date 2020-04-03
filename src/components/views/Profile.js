@@ -43,7 +43,7 @@ const profile = (props) => {
                         </Card>
                     </Link>
                 </Col>
-
+                
                 <Col className="fim" sm="3">
                     <Link to='./RequestHelpPage'>
                         <Card className="the-cards">
