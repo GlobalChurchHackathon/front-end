@@ -1,8 +1,12 @@
 import React from 'react';
 import { Container, Jumbotron, Card, Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../assests/home/home.css';
 // moved css to separate file
-
+import about from '../assests/home/about.png';
+import give from '../assests/home/give.png';
+import requestBoard from '../assests/home/requestBoard.png';
+import needhelp from '../assests/home/needhelp.png';
 //conditional rendering needs to be implemented
 //a guest will see less or different things than a logged in user will see
 
@@ -29,53 +33,38 @@ const Home = () => {
                         </p>
                 </Jumbotron>
                 <Row>
-                    <Col md="3">
-
-                        <div class="card text-left" className="info-card">
-
-                            <div class="card-body">
-                                <h4 class="card-title"></h4>
-                                <p class="card-text"></p>
-                                <button className="btn btn-primary">requests</button>
-                            </div>
-                        </div>
+                    <Col className="fim" sm="3">
+                        <Link to='./ChurchRequestBoard'><Card className="the-cards">
+                            <Card.Img variant="top" src={requestBoard}/>
+                            
+                        </Card>
+                        </Link>
                     </Col>
-                    <Col md="3">
+                    <Col className="fim" sm="3">
+                        <Link to='./About'>
+                        <Card  className="the-cards">
+                            <Card.Img variant="top" src={about}/>       
 
-                        <div class="card text-left info-card" className="info-card">
-
-                            <div class="card-body">
-                                <h4 class="card-title"></h4>
-                                <p class="card-text"></p>
-                                <button className="btn btn-primary">About</button>
-                            </div>
-                        </div>
+                        </Card>
+                        </Link>
                     </Col>
                 
-                    <Col md="3">
-
-                        <div class="card text-left info-card" className="info-card">
-
-                            <div class="card-body">
-                                <h4 class="card-title"></h4>
-                                <p class="card-text"></p>
-                                <button className="btn btn-primary">Help?</button>
-                            </div>
-                        </div>
+                    <Col className="fim" sm="3">
+                        <Link to='./RequestHelpPage'>
+                        <Card className="the-cards">
+                        <Card.Img variant="top" src={needhelp}/>
+                        </Card>
+                        </Link>
                     </Col>
-                    <Col md="3">
-
-                        <div class="card text-left" className="info-card">
-
-                            <div class="card-body">
-                                <h4 class="card-title"></h4>
-                                <p class="card-text"></p>
-                                <button className="btn btn-primary">Give</button>
-                            </div>
-                        </div>
+                    <Col className="fim" sm="3">
+                        <Link to='./give'>
+                        <Card className="the-cards">
+                    <Card.Img variant="top" src={give} />
+                        </Card>
+                        </Link>
                     </Col>
-
-                    
+                   
+                    <hr className="display-2"></hr>
                     
                     <Col className="info-cards" >
 
