@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Jumbotron, Card, CardDeck, Row, Button } from 'react-bootstrap';
+import { Container, Jumbotron, Card, CardDeck, Row } from 'react-bootstrap';
 import '../assests/about.css';
 import giveTen from '../assests/give/ten.png'
 import giveFifty from '../assests/give/fifty.png'
@@ -40,34 +40,34 @@ const Give = () => {
                         <Card.Body>
                             <Card.Title>Give Safely</Card.Title>
                         </Card.Body>
-                        <ModalGive/>
+                        <ModalGive />
                     </Card>
                     <Card>
                         <Card.Img variant="top" src={giveFifty} />
                         <Card.Body>
                             <Card.Title>Give Generously</Card.Title>
                         </Card.Body>
-                        <ModalGive/>
+                        <ModalGive />
                     </Card>
                     <Card>
                         <Card.Img variant="top" src={giveOneHundred} />
                         <Card.Body>
                             <Card.Title>Give Humbly</Card.Title>
                         </Card.Body>
-                        <ModalGive/>
+                        <ModalGive />
                     </Card>
                     <Card>
                         <Card.Img variant="top" src={giveFiveHundred} />
                         <Card.Body>
                             <Card.Title>Give Jesus</Card.Title>
                         </Card.Body>
-                        <ModalGive/>
+                        <ModalGive />
                     </Card>
                 </Row>
             </CardDeck>
             {/* still need to add some padding above this text */}
             {/* id added to padd bottom */}
-            <h1 className="display-5 text-center" id="lowerwords" style={{ margin: '3%'}}>Your donation goes to the local Church and will help supply the needs of your neighbors.</h1>
+            <h1 className="display-5 text-center" id="lowerwords" style={{ margin: '3%' }}>Your donation goes to the local Church and will help supply the needs of your neighbors.</h1>
         </div>
     );
 }
