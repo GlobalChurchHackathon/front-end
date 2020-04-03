@@ -10,7 +10,7 @@ import ChurchRequestBoard from './components/views/ChurchRequestBoard'
 import About from './components/views/About';
 import Give from './components/views/Give';
 import Profile from './components/views/Profile';
-import modalGive from './components/views/modalGive';
+import Update from './components/assests/profile/Update'
 
 
 import HouseHoldItems from './components/views/requestedItems/HouseHoldItems';
@@ -39,6 +39,7 @@ const App = () => (
           <Route exact path='/churchRequestBoard' component={ChurchRequestBoard} />
           <Route exact path='/give' component={Give} />
           <Route exact path='/profile' component={Profile} />
+          <Route exact path='/update' component={Update} />
         </Switch>
       </section>
       <Footer/>
