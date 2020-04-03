@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/views/Home';
 import Footer from './components/layouts/Footer';
@@ -11,6 +11,8 @@ import About from './components/views/About';
 import Give from './components/views/Give';
 import Profile from './components/views/Profile';
 import Alert from './components/layouts/Alert'
+import { loadUser } from './actions/auth';
+import setAuthToken from './utils/setAuthToken';
 
 //redux
 import { Provider } from 'react-redux';
@@ -24,33 +26,43 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 
+// Sets authentication token
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
 
-const App = () => (
-  <Provider store={store}>
-    <Router>
-      <Fragment>
-        <Navigation />
-        <Route exact path='/' component={Home} />
-        <section className='container' id="section">
-          <Alert />
-          {/* this section was making a white space above the footer */}
-          <Switch>
-            <Route exact path='/about' component={About} />
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/registerUser' component={Register} />
-            <Route exact path='/requestHelpPage' component={RequestHelpPage} />
-            <Route exact path='/houseHoldItems' component={HouseHoldItems} />
-            <Route exact path='/hygiene' component={Hygiene} />
-            <Route exact path='/food' component={Food} />
-            <Route exact path='/churchRequestBoard' component={ChurchRequestBoard} />
-            <Route exact path='/give' component={Give} />
-            <Route exact path='/profile' component={Profile} />
-          </Switch>
-        </section>
-        <Footer />
-      </Fragment>
-    </Router>
-  </Provider>
-);
+const App = () => {
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
+
+  return (
+    <Provider store={store}>
+      <Router>
+        <Fragment>
+          <Navigation />
+          <Route exact path='/' component={Home} />
+          <section className='container' id="section">
+            <Alert />
+            {/* this section was making a white space above the footer */}
+            <Switch>
+              <Route exact path='/about' component={About} />
+              <Route exact path='/login' component={Login} />
+              <Route exact path='/registerUser' component={Register} />
+              <Route exact path='/requestHelpPage' component={RequestHelpPage} />
+              <Route exact path='/houseHoldItems' component={HouseHoldItems} />
+              <Route exact path='/hygiene' component={Hygiene} />
+              <Route exact path='/food' component={Food} />
+              <Route exact path='/churchRequestBoard' component={ChurchRequestBoard} />
+              <Route exact path='/give' component={Give} />
+              <Route exact path='/profile' component={Profile} />
+            </Switch>
+          </section>
+          <Footer />
+        </Fragment>
+      </Router>
+    </Provider>
+  );
+}
 
 export default App;
