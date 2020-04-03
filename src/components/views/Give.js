@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Jumbotron, Card, CardDeck, Row } from 'react-bootstrap';
-import '../assests/about.css';
+import '../assests/about/about.css';
 import giveTen from '../assests/give/ten.png'
 import giveFifty from '../assests/give/fifty.png'
 import giveOneHundred from '../assests/give/oneHundred.png'
