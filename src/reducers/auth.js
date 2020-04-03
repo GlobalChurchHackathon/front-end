@@ -30,6 +30,21 @@ const initialState = {
                     isAuthenticated: true,
                     loading: false
                 };
+            case LOGIN_SUCCESS:
+                return {
+                    ...state,
+                    ...payload,
+                    isAuthenticated: true,
+                    loading: false
+                };
+            case LOGOUT:
+                return {
+                    ...state,
+                    token: null,
+                    isAuthenticated: false,
+                    loading: false,
+                    user: null
+                };
             default:
                 return state;
       }
