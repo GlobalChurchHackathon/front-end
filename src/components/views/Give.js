@@ -11,12 +11,11 @@ import ModalGive from './modalGive';
 const Give = () => {
     return (
         <div id="give-body">
-            <Container>
-                <Jumbotron style={{ background: "white", opacity: "70%" }}>
+            <Container style={{marginBottom: '0'}}>
+                <Jumbotron style={{ background: "white", opacity: "70%", marginBottom: '0' }}>
                     <h1 className="display-2 text-center">In the Midst</h1>
                     <h1 className="display-3 text-center">...give to those in need</h1>
-                    <hr className="my-1"></hr>
-                    <p>
+                    <p style={{margin: '5%'}}>
                         We the people are the Church, and that is why we have committed to help those in need.
                         Jesus said "Love your neighbor as yourself. There is no greater commandment than this" -Mark 12:31.
                         It is our greatest honor to bless our neighbors, especially during pressing times like these. COVID19
