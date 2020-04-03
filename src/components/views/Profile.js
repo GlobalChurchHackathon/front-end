@@ -24,7 +24,7 @@ const profile = (props) => {
                     </Jumbotron-fluid>
             </Row>
             <div>
-            <Update />
+            {/* <Update /> */}
             </div>
 
             <Row >
