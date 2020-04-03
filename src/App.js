@@ -9,7 +9,7 @@ import Login from './components/auth/Login'
 import ChurchRequestBoard from './components/views/ChurchRequestBoard'
 import About from './components/views/About';
 import Give from './components/views/Give';
-
+import Profile from './components/views/Profile';
 
 import HouseHoldItems from './components/views/requestedItems/HouseHoldItems';
 import Hygiene from './components/views/requestedItems/Hygiene';
@@ -36,6 +36,7 @@ const App = () => (
           <Route exact path='/food' component={Food} />
           <Route exact path='/churchRequestBoard' component={ChurchRequestBoard} />
           <Route exact path='/give' component={Give} />
+          <Route exact path='/profile' component={Profile} />
         </Switch>
       </section>
       <Footer/>
