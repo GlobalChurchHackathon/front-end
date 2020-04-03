@@ -1,13 +1,15 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
-import axios from 'axios';
+// import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setAlert } from '../../actions/alert';
-import PropTypes from 'prop-types'
+import { register } from '../../actions/auth';
+import PropTypes from 'prop-types';
 
 
 //function component w/hooks
-const Register = ({ setAlert }) => {
+const Register = ({ setAlert, register, isAthenticated }) => {
 
     const [formData, setFormData] = useState({
         firstName: '',
@@ -18,37 +20,45 @@ const Register = ({ setAlert }) => {
     });
 
     const { firstName, lastName, email, password, password2 } = formData;
-    const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
+    const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
     const onSubmit = async e => {
         e.preventDefault();
         if (password !== password2) {
             setAlert('passwords do not match', 'danger')
         } else {
-            console.log(formData);
-            const newUser = {
-                firstName,
-                lastName,
-                email,
-                password,
-            }
-            try {
-                const config = {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                }
+            // Removed below because it's now located in the actions/auth.js
+            // console.log(formData);
+            // const newUser = {
+            //     firstName,
+            //     lastName,
+            //     email,
+            //     password,
+            // }
+            // try {
+            //     const config = {
+            //         headers: {
+            //             'Content-Type': 'application/json'
+            //         }
+            //     }
 
-                const body = JSON.stringify(newUser);
+            //     const body = JSON.stringify(newUser);
 
-                const res = await axios.post('/api/users', body, config);
-                console.log(res.data);
-            } catch (err) {
-                console.error(err.response.data);
-            }
+            //     const res = await axios.post('/api/users', body, config);
+            //     console.log(res.data);
+            // } catch (err) {
+            //     console.error(err.response.data);
+            // }
+            register({ firstName, lastName, email, password });
         }
 
     }
+
+    // Redirects user to home page once registered
+    if (isAthenticated) {
+        return <Redirect to='/' />
+    }
+
     return (
 
         <Fragment>
@@ -65,6 +75,8 @@ const Register = ({ setAlert }) => {
                                     name="firstName"
                                     value={firstName}
                                     onChange={e => onChange(e)}
+                                    onFocus={(e) => e.target.placeholder = ""}
+                                    onBlur={(e) => e.target.placeholder = "First Name"}
                                     required
                                 />
                             </div>
@@ -74,6 +86,8 @@ const Register = ({ setAlert }) => {
                                     name="lastName"
                                     value={lastName}
                                     onChange={e => onChange(e)}
+                                    onFocus={(e) => e.target.placeholder = ""}
+                                    onBlur={(e) => e.target.placeholder = "Last Name"}
                                     required
                                 />
                             </div>
@@ -83,6 +97,8 @@ const Register = ({ setAlert }) => {
                                     name="email"
                                     value={email}
                                     onChange={e => onChange(e)}
+                                    onFocus={(e) => e.target.placeholder = ""}
+                                    onBlur={(e) => e.target.placeholder = "Email Address"}
                                     required
                                 />
                             </div>
@@ -94,6 +110,8 @@ const Register = ({ setAlert }) => {
                                     value={password}
                                     onChange={e => onChange(e)}
                                     minLength="8"
+                                    onFocus={(e) => e.target.placeholder = ""}
+                                    onBlur={(e) => e.target.placeholder = "Password"}
                                     required
                                 />
                             </div>
@@ -105,6 +123,8 @@ const Register = ({ setAlert }) => {
                                     value={password2}
                                     onChange={e => onChange(e)}
                                     minLength="8"
+                                    onFocus={(e) => e.target.placeholder = ""}
+                                    onBlur={(e) => e.target.placeholder = "Confirm Password"}
                                     required
                                 />
                             </div>
@@ -121,7 +141,13 @@ const Register = ({ setAlert }) => {
 }
 
 Register.propTypes = {
-    setAlert: PropTypes.func.isRequired
+    setAlert: PropTypes.func.isRequired,
+    register: PropTypes.func.isRequired,
+    isAthenticated: PropTypes.bool
 }
 
-export default connect(null, { setAlert })(Register);
+const mapStateToProps = state => ({
+    isAthenticated: state.auth.isAthenticated
+});
+
+export default connect(mapStateToProps, { setAlert, register })(Register);
