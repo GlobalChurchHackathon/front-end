@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Table, DropdownButton, Dropdown, Modal } from 'react-bootstrap';
+import { Button, Table } from 'react-bootstrap';
 
 //drop down, why do you need this item
 //button fireEvent, when fired 'bag' icon number increments 
