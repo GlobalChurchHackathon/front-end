@@ -5,11 +5,12 @@ import giveTen from '../assests/give/ten.png'
 import giveFifty from '../assests/give/fifty.png'
 import giveOneHundred from '../assests/give/oneHundred.png'
 import giveFiveHundred from '../assests/give/fiveHundred.png'
+import ModalGive from './modalGive';
 
 
 const Give = () => {
     return (
-        <div id="about-body">
+        <div id="give-body">
             <Container>
                 <Jumbotron style={{ background: "white", opacity: "70%" }}>
                     <h1 className="display-2 text-center">In the Midst</h1>
@@ -39,34 +40,34 @@ const Give = () => {
                         <Card.Body>
                             <Card.Title>Give Safely</Card.Title>
                         </Card.Body>
-                        <Button variant="primary">Donate $10</Button>
+                        <ModalGive/>
                     </Card>
                     <Card>
                         <Card.Img variant="top" src={giveFifty} />
                         <Card.Body>
                             <Card.Title>Give Generously</Card.Title>
                         </Card.Body>
-                        <Button variant="primary">Donate $50</Button>
+                        <ModalGive/>
                     </Card>
                     <Card>
                         <Card.Img variant="top" src={giveOneHundred} />
                         <Card.Body>
                             <Card.Title>Give Humbly</Card.Title>
                         </Card.Body>
-                        <Button variant="primary">Donate $100</Button>
+                        <ModalGive/>
                     </Card>
                     <Card>
                         <Card.Img variant="top" src={giveFiveHundred} />
                         <Card.Body>
                             <Card.Title>Give Jesus</Card.Title>
                         </Card.Body>
-                        <Button variant="primary">Donate $500</Button>
+                        <ModalGive/>
                     </Card>
                 </Row>
             </CardDeck>
             {/* still need to add some padding above this text */}
             {/* id added to padd bottom */}
-            <h1 className="display-5 text-center" id="lowerwords">Your donation goes to the local Church and will help supply the needs of your neighbors.</h1>
+            <h1 className="display-5 text-center" id="lowerwords" style={{ margin: '3%'}}>Your donation goes to the local Church and will help supply the needs of your neighbors.</h1>
         </div>
     );
 }

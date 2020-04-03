@@ -9,6 +9,7 @@ import Login from './components/auth/Login'
 import ChurchRequestBoard from './components/views/ChurchRequestBoard'
 import About from './components/views/About';
 import Give from './components/views/Give';
+import modalGive from './components/views/modalGive';
 
 
 import HouseHoldItems from './components/views/requestedItems/HouseHoldItems';
