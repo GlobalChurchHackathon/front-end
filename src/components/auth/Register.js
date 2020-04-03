@@ -12,15 +12,11 @@ const Register = () => {
         email: '',
         password: '',
         password2: '',
-        latLng: {},
         address: '',
     });
 
-    const { firstName, lastName, email, password, password2, latLng, address } = formData;
+    const { firstName, lastName, email, password, password2, address } = formData;
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
-    const onLocationChange = address => setFormData({ ...formData, address })
-
-    const onLocationSelect = ({ latLng, address }) => setFormData({ ...formData, latLng, address })
 
     const onSubmit = (e) => {
         e.preventDefault()
