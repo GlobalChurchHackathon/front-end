@@ -37,7 +37,7 @@ export default function Footer() {
       <Row>
         <Col>
           <p className="blockquote-footer" style={{marginTop: "1em"}}>
-            "How good and pleasant it is when God's people live together in unity!" -Psalm 133:1
+            “Carry each other’s burdens, and in this way you will fulfill the law of Christ” -Galatians 6:2
           </p>
         </Col>
       </Row>
