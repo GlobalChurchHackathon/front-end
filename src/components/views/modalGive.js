@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Modal, Form, Row, Col } from 'react-bootstrap'
+import { Button, Modal, Form, Col } from 'react-bootstrap'
 
 
 class ModalGive extends React.Component {
@@ -15,6 +15,7 @@ class ModalGive extends React.Component {
 
     render() {
         return (
+            <>
             <div style={{ textAlign: 'center', marginBottom: '7%' }} >
                 <Button onClick={() => { this.handleModal() }}>Donate</Button>
                     <Modal show={this.state.show} onHide={() => this.handleModal()} >
@@ -120,7 +121,8 @@ class ModalGive extends React.Component {
                         </Button>
                     </Modal.Footer>
                 </Modal>
-            </div>
+                </div>
+            </>
         );
     }
 }

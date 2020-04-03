@@ -1,35 +1,65 @@
 import React from 'react';
-import { Col, Row, } from 'react-bootstrap';
+import { Col, Row, Card, Jumbotron } from 'react-bootstrap';
 import '../assests/profile/profile.css';
+import { Link } from 'react-router-dom';
+import about from '../assests/home/about.png';
+import give from '../assests/home/give.png';
+import requestBoard from '../assests/home/requestBoard.png';
+import needhelp from '../assests/home/needhelp.png';
+import Update from '../assests/profile/Update';
 
-const profile = () => {
+const profile = (props) => {
+
     return (
         <>
-            <Container-fluid>
-                <Row className="justify-content-start divs">
-                    <Col md="2">
+            <Row className="divs justify-content-center">
+                
+                    <Jumbotron-fluid className="text-center">  
+                    <h1 class="display-3">Welcome, {/*{this.props.firstName}*/}</h1> 
+                        <hr class="my-2"></hr>
+                    <p class="lead">Please keep your address up to date</p>
+                    <p>
+                       <a className="btn btn-dark btn-lg" href="/Update" role="button">Edit Information</a>
+                        </p>       
+                    </Jumbotron-fluid>
+            </Row>
+            <div>
+            <Update />
+            </div>
 
-                    </Col>
-                    <Col md="2">
+            <Row >
+                <Col className="fim" sm="3">
+                    <Link to='./ChurchRequestBoard'><Card className="the-cards">
+                        <Card.Img variant="top" src={requestBoard} />
 
-                    </Col>
-                    <Col md="2">
+                    </Card>
+                    </Link>
+                </Col>
+                <Col className="fim" sm="3">
+                    <Link to='./About'>
+                        <Card className="the-cards">
+                            <Card.Img variant="top" src={about} />
 
-                    </Col>
-                    <Col md="2">
+                        </Card>
+                    </Link>
+                </Col>
 
-                    </Col>
-                    <Col md="2">
+                <Col className="fim" sm="3">
+                    <Link to='./RequestHelpPage'>
+                        <Card className="the-cards">
+                            <Card.Img variant="top" src={needhelp} />
+                        </Card>
+                    </Link>
+                </Col>
+                <Col className="fim" sm="3">
+                    <Link to='./give'>
+                        <Card className="the-cards">
+                            <Card.Img variant="top" src={give} />
+                        </Card>
+                    </Link>
+                </Col>
 
-                    </Col>
-                </Row>
-                <Row className="divs text-center">
-                    <Col lg="12">
-
-                    </Col>
-
-                </Row>
-            </Container-fluid>
+            </Row>
         </>
     );
 }
