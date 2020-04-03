@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { setAlert } from './alert';
+import setAuthToken from '../utils/setAuthToken';
 import {
     REGISTER_SUCCESS,
     REGISTER_FAIL,
@@ -11,10 +12,15 @@ import {
     CLEAR_PROFILE
   } from './types';
 
+
 // Note: replace axios paths with our backend versions
 
 // Load user
 export const loadUser = () => async dispatch => {
+    if(localStorage.token) {
+        setAuthToken(localStorage.token);
+    }
+
     try {
         const res = await axios.get('/api/auth');
 
@@ -30,22 +36,24 @@ export const loadUser = () => async dispatch => {
 };
 
 // Register user
-export const register = ({ name, email, password }) => async dispatch => {
+export const register = ({ firstName, lastName, email, password }) => async dispatch => {
     const config = {
         headers: {
             'Content-Type': 'application/json'
         }
     };
 
-    const body = JSON.stringify({ name, email, password });
+    const body = JSON.stringify({ firstName, lastName, email, password });
 
     try {
-        const res = await axios.post('/api/user', body, config);
+        const res = await axios.post('/api/users', body, config);
 
         dispatch({
             type: REGISTER_SUCCESS,
             payload: res.data
         });
+
+        dispatch(loadUser());
     } catch (err) {
         const errors = err.response.data.errors;
 
@@ -95,4 +103,4 @@ export const login = (email, password) => async dispatch => {
 export const logout = () => dispatch => {
     dispatch({ type: CLEAR_PROFILE });
     dispatch({ type: LOGOUT });
-  };
+};
