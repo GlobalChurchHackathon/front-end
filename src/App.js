@@ -10,7 +10,11 @@ import ChurchRequestBoard from './components/views/ChurchRequestBoard'
 import About from './components/views/About';
 import Give from './components/views/Give';
 import Profile from './components/views/Profile';
-import modalGive from './components/views/modalGive';
+import Alert from './components/layouts/Alert'
+
+//redux
+import { Provider } from 'react-redux';
+import store from './store';
 
 
 import HouseHoldItems from './components/views/requestedItems/HouseHoldItems';
@@ -22,28 +26,31 @@ import './App.css';
 
 
 const App = () => (
-  <Router>
-    <Fragment>
-      <Navigation />
-      <Route exact path='/' component={Home} />
-      <section className='container' id="section">
-        {/* this section was making a white space above the footer */}
-        <Switch>
-          <Route exact path='/about' component={About} />
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/registerUser' component={Register} />
-          <Route exact path='/requestHelpPage' component={RequestHelpPage} />
-          <Route exact path='/houseHoldItems' component={HouseHoldItems} />
-          <Route exact path='/hygiene' component={Hygiene} />
-          <Route exact path='/food' component={Food} />
-          <Route exact path='/churchRequestBoard' component={ChurchRequestBoard} />
-          <Route exact path='/give' component={Give} />
-          <Route exact path='/profile' component={Profile} />
-        </Switch>
-      </section>
-      <Footer/>
-    </Fragment>
-  </Router>
+  <Provider store={store}>
+    <Router>
+      <Fragment>
+        <Navigation />
+        <Route exact path='/' component={Home} />
+        <section className='container' id="section">
+          <Alert />
+          {/* this section was making a white space above the footer */}
+          <Switch>
+            <Route exact path='/about' component={About} />
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/registerUser' component={Register} />
+            <Route exact path='/requestHelpPage' component={RequestHelpPage} />
+            <Route exact path='/houseHoldItems' component={HouseHoldItems} />
+            <Route exact path='/hygiene' component={Hygiene} />
+            <Route exact path='/food' component={Food} />
+            <Route exact path='/churchRequestBoard' component={ChurchRequestBoard} />
+            <Route exact path='/give' component={Give} />
+            <Route exact path='/profile' component={Profile} />
+          </Switch>
+        </section>
+        <Footer />
+      </Fragment>
+    </Router>
+  </Provider>
 );
 
 export default App;

@@ -1,10 +1,13 @@
 import React, { Fragment, useState } from 'react'
 import { Container, Col, Row } from 'react-bootstrap';
 import axios from 'axios';
-import LocationSearchInput from './LocationSearchInput';
+import { connect } from 'react-redux';
+import { setAlert } from '../../actions/alert';
+import PropTypes from 'prop-types'
+
 
 //function component w/hooks
-const Register = () => {
+const Register = ({ setAlert }) => {
 
     const [formData, setFormData] = useState({
         firstName: '',
@@ -12,20 +15,15 @@ const Register = () => {
         email: '',
         password: '',
         password2: '',
-        latLng: {},
-        address: '',
     });
 
-    const { firstName, lastName, email, password, password2, latLng, address } = formData;
+    const { firstName, lastName, email, password, password2 } = formData;
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
-    const onLocationChange = address => setFormData({ ...formData, address })
-
-    const onLocationSelect = ({ latLng, address }) => setFormData({ ...formData, latLng, address })
 
     const onSubmit = async e => {
         e.preventDefault();
         if (password !== password2) {
-            console.log('passwords do not match')
+            setAlert('passwords do not match', 'danger')
         } else {
             console.log(formData);
             const newUser = {
@@ -33,8 +31,6 @@ const Register = () => {
                 lastName,
                 email,
                 password,
-                latLng,
-                address,
             }
             try {
                 const config = {
@@ -90,11 +86,6 @@ const Register = () => {
                                     required
                                 />
                             </div>
-                            <LocationSearchInput
-                                onLocationSelect={onLocationSelect}
-                                address={address}
-                                setAddress={onLocationChange}
-                            />
                             <div className="form-group">
                                 <input
                                     type="password"
@@ -129,4 +120,8 @@ const Register = () => {
     )
 }
 
-export default Register;
+Register.propTypes = {
+    setAlert: PropTypes.func.isRequired
+}
+
+export default connect(null, { setAlert })(Register);

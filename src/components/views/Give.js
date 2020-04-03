@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Jumbotron, Card, CardDeck, Row, Button } from 'react-bootstrap';
-import '../assests/about/about.css';
+import { Container, Jumbotron, Card, CardDeck, Row } from 'react-bootstrap';
+import '../assests/about.css';
 import giveTen from '../assests/give/ten.png'
 import giveFifty from '../assests/give/fifty.png'
 import giveOneHundred from '../assests/give/oneHundred.png'
@@ -11,12 +11,11 @@ import ModalGive from './modalGive';
 const Give = () => {
     return (
         <div id="give-body">
-            <Container>
-                <Jumbotron style={{ background: "white", opacity: "70%" }}>
+            <Container style={{marginBottom: '0'}}>
+                <Jumbotron style={{ background: "white", opacity: "70%", marginBottom: '0' }}>
                     <h1 className="display-2 text-center">In the Midst</h1>
                     <h1 className="display-3 text-center">...give to those in need</h1>
-                    <hr className="my-1"></hr>
-                    <p>
+                    <p style={{margin: '5%'}}>
                         We the people are the Church, and that is why we have committed to help those in need.
                         Jesus said "Love your neighbor as yourself. There is no greater commandment than this" -Mark 12:31.
                         It is our greatest honor to bless our neighbors, especially during pressing times like these. COVID19
@@ -40,34 +39,34 @@ const Give = () => {
                         <Card.Body>
                             <Card.Title>Give Safely</Card.Title>
                         </Card.Body>
-                        <ModalGive/>
+                        <ModalGive />
                     </Card>
                     <Card>
                         <Card.Img variant="top" src={giveFifty} />
                         <Card.Body>
                             <Card.Title>Give Generously</Card.Title>
                         </Card.Body>
-                        <ModalGive/>
+                        <ModalGive />
                     </Card>
                     <Card>
                         <Card.Img variant="top" src={giveOneHundred} />
                         <Card.Body>
                             <Card.Title>Give Humbly</Card.Title>
                         </Card.Body>
-                        <ModalGive/>
+                        <ModalGive />
                     </Card>
                     <Card>
                         <Card.Img variant="top" src={giveFiveHundred} />
                         <Card.Body>
                             <Card.Title>Give Jesus</Card.Title>
                         </Card.Body>
-                        <ModalGive/>
+                        <ModalGive />
                     </Card>
                 </Row>
             </CardDeck>
             {/* still need to add some padding above this text */}
             {/* id added to padd bottom */}
-            <h1 className="display-5 text-center" id="lowerwords" style={{ margin: '3%'}}>Your donation goes to the local Church and will help supply the needs of your neighbors.</h1>
+            <h1 className="display-5 text-center" id="lowerwords" style={{ margin: '3%' }}>Your donation goes to the local Church and will help supply the needs of your neighbors.</h1>
         </div>
     );
 }
