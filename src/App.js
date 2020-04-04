@@ -45,7 +45,6 @@ const App = () => {
           <Route exact path='/' component={Home} />
           <section className='container' id="section">
             <Alert />
-            {/* this section was making a white space above the footer */}
             <Switch>
               <Route exact path='/about' component={About} />
               <Route exact path='/login' component={Login} />

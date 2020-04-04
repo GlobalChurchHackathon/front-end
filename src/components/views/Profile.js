@@ -13,32 +13,30 @@ const profile = (props) => {
                     <hr class="my-2"></hr>
                 </Jumbotron-fluid>
             </Row>
-            <Container>
-                <Row>
-                    <Col>
-                        <ListGroup>
-                            <ListGroup.Item>First Name {/*{props.firstName}*/}</ListGroup.Item>
-                            <ListGroup.Item>Last Name {/*{props.lastName}*/}</ListGroup.Item>
-                            <ListGroup.Item>Email Address {/*{props.email}*/}</ListGroup.Item>
-                            <ListGroup.Item>Street Address {/*{props.streetAddress}*/}</ListGroup.Item>
-                            <ListGroup.Item>City {/*{props.city}*/}</ListGroup.Item>
-                            <ListGroup.Item>State {/*{props.state}*/}</ListGroup.Item>
-                            <ListGroup.Item>Phone Number {/*{props.phoneNumber}*/}</ListGroup.Item>
-                        </ListGroup>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Card>
-                            <Card.Body>
-                                <Card.Title className="text-center"> Please make sure all of your information is up to date.
+            <Row>
+                <Col>
+                    <ListGroup>
+                        <ListGroup.Item>First Name {/*{props.firstName}*/}</ListGroup.Item>
+                        <ListGroup.Item>Last Name {/*{props.lastName}*/}</ListGroup.Item>
+                        <ListGroup.Item>Email Address {/*{props.email}*/}</ListGroup.Item>
+                        <ListGroup.Item>Street Address {/*{props.streetAddress}*/}</ListGroup.Item>
+                        <ListGroup.Item>City {/*{props.city}*/}</ListGroup.Item>
+                        <ListGroup.Item>State {/*{props.state}*/}</ListGroup.Item>
+                        <ListGroup.Item>Phone Number {/*{props.phoneNumber}*/}</ListGroup.Item>
+                    </ListGroup>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <Card>
+                        <Card.Body>
+                            <Card.Title className="text-center"> Please make sure all of your information is up to date.
                                 If you have made a request, the address above is where you items will be delivered.</Card.Title>
-                            </Card.Body>
-                            <UpdateProfile />
-                        </Card>
-                    </Col>
-                </Row>
-            </Container>
+                        </Card.Body>
+                        <UpdateProfile />
+                    </Card>
+                </Col>
+            </Row>
         </Container>
     );
 }
