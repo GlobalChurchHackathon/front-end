@@ -15,6 +15,7 @@
     animation: fadein 3s;
     animation-duration: 3s;
     overflow: auto;
+    min-height: 120vh;
 }
 
 .bars{
@@ -28,4 +29,8 @@
 
 .displayInfo{
     display:none;
+}
+
+.profileInfo{
+    opacity: 80%;
 }
