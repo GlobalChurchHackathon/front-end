@@ -13,6 +13,7 @@ import Profile from './components/views/Profile';
 import Alert from './components/layouts/Alert'
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
+import Update from './components/assests/profile/Update';
 
 //redux
 import { Provider } from 'react-redux';
@@ -56,6 +57,7 @@ const App = () => {
               <Route exact path='/churchRequestBoard' component={ChurchRequestBoard} />
               <Route exact path='/give' component={Give} />
               <Route exact path='/profile' component={Profile} />
+              <Route exact path='/update' component={Update} />
             </Switch>
           </section>
           <Footer />
@@ -63,6 +65,7 @@ const App = () => {
       </Router>
     </Provider>
   );
+
 }
 
 export default App;
