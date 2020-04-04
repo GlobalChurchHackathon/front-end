@@ -16,11 +16,13 @@
     overflow: hidden;
     min-height:100vh;
     width:auto;
-    padding-top: 60px;
+    padding-top: 0px;
 }
 .the-cards{
-    width: 10rem;
-    height: 10rem;
+    /* width: 10rem;
+    height: 10rem; */
+    width: 100%;
+    height: auto;
     border-radius: 3rem;
     -webkit-animation: fadein 4s;
     -moz-animation: fadein 4s;
@@ -35,8 +37,7 @@
 }
 
 .fim{
-    padding-bottom: 350px;
-
+    padding-bottom: 25px;
 }
 .footer{
     z-index: 5;
@@ -87,8 +88,11 @@
     background-color: antiquewhite;
     opacity: 90%;
 }
+p.display-6.testimony{
+    margin-top: 25px;
+}
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 845px){
   #h1{
     font-size: 2.3em;
   }
@@ -101,16 +105,28 @@
     clear: both;
     display: inline-block;
   }
-    .fim{
+    /* .fim{
     display:none;
-  }
+  } */
   #jumbo2{
       padding-bottom:50rem;
   }
+  .homeSlider{
+    margin-top: 80px;  
+    }
+  div.info-cards.col{
+    padding-bottom: 160px;
+    }
 };
 
+
+/* Slider media query on home page */
 @media screen and (max-width: 425px){
     .homeSlider{
-        margin-top: 150px;  
+       padding-top: 0px;  
     }
+}
+
+.homeSlider{
+    margin-top: 108px;  
 }

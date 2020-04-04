@@ -487,9 +487,9 @@ button {
 }
 
 /* Mobile Styles */
-@media (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .container {
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
 
   .hide-sm {
@@ -571,5 +571,19 @@ button {
   .post a,
   .post button {
     padding: 0.3rem 0.4rem;
+  }
+  .navbarLogo{
+    width: 13rem;
+    height: auto;
+  }
+}
+
+
+/* this shrink the nav logo so the hamburger 
+does not go under the logo on small screens */
+@media screen and (max-width: 425px){
+  .navbarLogo{
+    width: 11rem;
+    height: auto;
   }
 }

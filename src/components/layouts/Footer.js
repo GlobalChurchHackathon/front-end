@@ -8,7 +8,7 @@ export default function Footer() {
     <Container id="foot" className="text-center bg-dark footer" fluid>
       <Row>
         <Col className="footerTitle" >
-          <h5>— In the Midst of chaos, we will unite and help one another —</h5>
+          <h3>- In the Midst of chaos, we will unite and help one another —</h3>
         </Col>
       </Row>
       <Row>
@@ -17,8 +17,8 @@ export default function Footer() {
         </Col>
         <Col>
           <ul>
-            <li><Link to='/login'>Login</Link></li>
-            <li><Link to='/registerUser'>Register</Link></li>
+            <li><Link to='/requestHelpPage'>Get Help</Link></li>
+            <li><Link to='#!'>Give</Link></li>
           </ul>
         </Col>
         <Col>
@@ -29,8 +29,8 @@ export default function Footer() {
         </Col>
         <Col>
           <ul>
-            <li><Link to='/requestHelpPage'>Needs</Link></li>
-            <li><Link to='#!'>Give</Link></li>
+            <li><Link to='/login'>Login</Link></li>
+            <li><Link to='/registerUser'>Register</Link></li>
           </ul>
         </Col>
       </Row>
