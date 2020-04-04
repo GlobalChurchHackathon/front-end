@@ -16,7 +16,7 @@ const About = () => {
                         In the midst of chaos lies the eye of the storm – a place of peace and assurance that all will be well.
                         Our goal is to provide people with a way to connect with essential resources, whether it be food, hygiene,
                         or household items, through neighboring churches and communities. If you are in need, if you want a place
-                        to rest and regain your footing, please create an account, head to the “Need Help?” tab, and choose what
+                        to rest and regain your footing, please create an account, head to the “Get Help” tab, and choose what
                         you need. If you would like to help, you can donate in the "Give" tab. All are welcome!
                     </p>
                     <p>

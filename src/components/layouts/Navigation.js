@@ -15,7 +15,7 @@ const Navigation = ({ auth: { isAuthenticated, loading }, logout }) => {
                 <Nav className="ml-auto">
                     <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
-                    <Link to="/requestHelpPage">Need Help?</Link>
+                    <Link to="/requestHelpPage">Get Help</Link>
                     <Link to="/churchRequestBoard">Requests Board</Link>
                     <Link to="/give">Give</Link>
                     <a onClick={logout} href='/'>
