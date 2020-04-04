@@ -110,9 +110,9 @@ const Home = () => {
                         <Col className="info-cards" >
 
                             <div className="card text-left">
-                                <div class="card-body">
-                                    <h4 class="card-title">3,184,513</h4>
-                                    <p class="card-text">Items Received</p>
+                                <div className="card-body">
+                                    <h4 className="card-title">3,184,513</h4>
+                                    <p className="card-text">Items Received</p>
                                 </div>
                             </div>
                         </Col>
@@ -122,17 +122,17 @@ const Home = () => {
                             <div className="card text-left">
 
 
-                                <div class="card-body">
-                                    <h4 class="card-title">1568</h4>
-                                    <p class="card-text">Churches Involved</p>
+                                <div className="card-body">
+                                    <h4 className="card-title">1568</h4>
+                                    <p className="card-text">Churches Involved</p>
                                 </div>
                             </div>
                         </Col>
                         <Col className="info-cards" >
                             <div className="card text-left">
-                                <div class="card-body">
-                                    <h4 class="card-title">131,489</h4>
-                                    <p class="card-text">People Helped</p>
+                                <div className="card-body">
+                                    <h4 className="card-title">131,489</h4>
+                                    <p className="card-text">People Helped</p>
                                 </div>
                             </div>
                         </Col>
