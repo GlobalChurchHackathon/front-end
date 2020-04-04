@@ -16,7 +16,6 @@ const Navigation = ({ auth: { isAuthenticated, loading }, logout }) => {
                     <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
                     <Link to="/requestHelpPage">Get Help</Link>
-                    <Link to="/churchRequestBoard">Requests Board</Link>
                     <Link to="/give">Give</Link>
                     <a onClick={logout} href='/'>
                         <span>Logout</span>
@@ -37,7 +36,6 @@ const Navigation = ({ auth: { isAuthenticated, loading }, logout }) => {
                     <Link to="/login">Login</Link>
                     <Link to="/registerUser">Register</Link>
                     <Link to="/requestHelpPage">Get Help</Link>
-                    <Link to="/churchRequestBoard">Requests Board</Link>
                     <Link to="/give">Give</Link>
                 </Nav>
             </Navbar.Collapse>
