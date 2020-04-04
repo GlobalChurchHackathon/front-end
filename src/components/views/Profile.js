@@ -6,26 +6,24 @@ import UpdateProfile from './UpdateProfile';
 const profile = (props) => {
 
     return (
-        <>
+        <Container>
             <Row className="divs justify-content-center">
-
                 <Jumbotron-fluid className="text-center">
-                    <h1 class="display-3">Welcome, {/*{this.props.firstName}*/}</h1>
+                    <h1 class="display-3">Welcome, {/*{props.firstName}*/}</h1>
                     <hr class="my-2"></hr>
                 </Jumbotron-fluid>
             </Row>
             <Container>
                 <Row>
                     <Col>
-
                         <ListGroup>
-                            <ListGroup.Item>First Name {/*{this.props.firstName}*/}</ListGroup.Item>
-                            <ListGroup.Item>Last Name {/*{this.props.lastName}*/}</ListGroup.Item>
-                            <ListGroup.Item>Email Address {/*{this.props.email}*/}</ListGroup.Item>
-                            <ListGroup.Item>Street Address {/*{this.props.streetAddress}*/}</ListGroup.Item>
-                            <ListGroup.Item>City {/*{this.props.city}*/}</ListGroup.Item>
-                            <ListGroup.Item>State {/*{this.props.state}*/}</ListGroup.Item>
-                            <ListGroup.Item>Phone Number {/*{this.props.phoneNumber}*/}</ListGroup.Item>
+                            <ListGroup.Item>First Name {/*{props.firstName}*/}</ListGroup.Item>
+                            <ListGroup.Item>Last Name {/*{props.lastName}*/}</ListGroup.Item>
+                            <ListGroup.Item>Email Address {/*{props.email}*/}</ListGroup.Item>
+                            <ListGroup.Item>Street Address {/*{props.streetAddress}*/}</ListGroup.Item>
+                            <ListGroup.Item>City {/*{props.city}*/}</ListGroup.Item>
+                            <ListGroup.Item>State {/*{props.state}*/}</ListGroup.Item>
+                            <ListGroup.Item>Phone Number {/*{props.phoneNumber}*/}</ListGroup.Item>
                         </ListGroup>
                     </Col>
                 </Row>
@@ -41,7 +39,8 @@ const profile = (props) => {
                     </Col>
                 </Row>
             </Container>
-        </>
+        </Container>
     );
 }
+
 export default profile;

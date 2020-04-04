@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Modal, Form, Col } from 'react-bootstrap'
+import { Button, Modal, Form, Col, Container } from 'react-bootstrap'
 
 
 class UpdateProfile extends React.Component {
@@ -15,7 +15,7 @@ class UpdateProfile extends React.Component {
 
     render() {
         return (
-            <>
+            <Container>
                 <div style={{ textAlign: 'center', marginBottom: '7%' }} >
                     <Button onClick={() => { this.handleModal() }}>Update Profile Information</Button>
                     <Modal show={this.state.show} onHide={() => this.handleModal()} >
@@ -71,11 +71,11 @@ class UpdateProfile extends React.Component {
                                     <p>Thanks! This is the address we will use to drop off your requested items.</p>
                                 </div>
                                 <br></br>
-                                
+
                                 <Form.Row className="justify-content-center">
                                     <Button onClick={() => { this.handleModal() }} className="btn btn-dark large">Save Changes</Button>
                                 </Form.Row>
-                                
+
                             </Form>
                         </Modal.Body>
                         {/* <Modal.Footer>
@@ -85,7 +85,7 @@ class UpdateProfile extends React.Component {
                         </Modal.Footer> */}
                     </Modal>
                 </div>
-            </>
+            </Container>
         );
     }
 }
