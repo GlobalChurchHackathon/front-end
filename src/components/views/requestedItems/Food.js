@@ -7,16 +7,33 @@ import { Button, Table } from 'react-bootstrap';
 const items = [
     {
         id: 1,
-        product: "meats",
+        product: "Ground Beef",
 
     },
     {
         id: 2,
-        product: "grains"
+        product: "Rice"
     },
     {
         id: 3,
-        product: "vegetables"
+
+        //product: "vegetables"
+
+        product: "Canned Goods"
+    },
+    {
+        id: 4,
+        product: "Pasta",
+
+    },
+    {
+        id: 5,
+        product: "Milk"
+    },
+    {
+        id: 6,
+        product: "Bread"
+
     }
 ]
 const Food = (userToken) => {
@@ -30,13 +47,17 @@ const Food = (userToken) => {
     // }, [userToken])
 
     return (
-        <div style={{ marginTop: '10%'}}>
+
+        //<div style={{ marginTop: '10%'}}>
+
+        <div style={{ height: '200vh', paddingTop: '100px', paddingBottom: '100px' }}>
+
             <h1>Food</h1>
             <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <th>placeholder</th>
-                        <th>Product Name</th>
+                        
+                        <th>Available Items</th>
                         <th>Add to bag</th>
                     </tr>
                 </thead>
@@ -45,7 +66,7 @@ const Food = (userToken) => {
                     {
                         items.map(item =>
                             <tr>
-                                <td>{item.id}</td>
+                                {/* <td>{item.id}</td> */}
                                 <td>{item.product}</td>
                                 <td><Button style={{ width: '100%', height: '100%', border: '1px solid' }}>Add to bag</Button></td>
                             </tr>
