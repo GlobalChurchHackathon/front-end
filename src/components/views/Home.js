@@ -16,123 +16,129 @@ import slider4 from '../assests/home/slider4.png'
 
 const Home = () => {
     return (
-        <div id="home-body">
-            <hr className="my-1"></hr>
+        <div className="homeSlider">
 
-            <div className="homeSlider">
-                <Jumbotron>
-                    <Carousel>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src={slider1}
-                                alt="First slide" />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src={slider2}
-                                alt="First slide" />
-                        </Carousel.Item>
+            <Carousel>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={slider1}
+                        alt="First slide" />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={slider2}
+                        alt="First slide" />
+                </Carousel.Item>
 
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src={slider3}
-                                alt="First slide" />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src={slider4}
-                                alt="First slide" />
-                        </Carousel.Item>
-                    </Carousel>
-                </Jumbotron>
-            </div>
-            <Container>
-                <Jumbotron id="jumbo">
-                    <h1 id="h1" className="display-3 text-center">IN|THE|MIDST</h1>
-                    <p id="jp" className="lead">Created to supply those in need with essential items through neighboring churches and communities </p>
-                    <hr className="my-1"></hr>
-                    <p>You can post new needs for yourself or someone you know, post supplies that you have available, or search for supplies that have already been made available.</p>
-                    <p className="lead">
-                    </p>
-                </Jumbotron>
-                <Jumbotron id="jumbo2">
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={slider3}
+                        alt="First slide" />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={slider4}
+                        alt="First slide" />
+                </Carousel.Item>
+            </Carousel>
 
-                    <p className="display-6">"In a period of great difficulty, Covid-19 left my family alone and unemployed.  Even basic essentials like toothpaste, bread, and milk were near impossible for us to afford or even find.  In the midst became a light at the end of the tunnel for us, we have been so blessed though in the midst and partnering churches who have gone above and beyond to provide our needs!  Thank you In the Midst"</p>
-                    <hr className="my-1"></hr>
 
-                    <p className="lead">
-                        -Test-testimonial
+
+            <div id="home-body">
+                {/* <hr className="my-1"></hr> */}
+
+
+                <Container>
+                    <Jumbotron id="jumbo">
+                        <h1 id="h1" className="display-3 text-center">IN|THE|MIDST</h1>
+                        <p id="jp" className="lead">In the Midst was created to supply those in need with essential items through neighboring churches and communities.
+                        COVID19 has effected our community in so many ways. Over 10 million Americans have applied for unemployment thus far. We're here to help you
+                        by supplying food and basic household items. If you have a need, <Link to='./ChurchRequestBoard'> please reach out!</Link>
                         </p>
-                </Jumbotron>
-                <Row>
-                    <Col className="fim" sm="3">
-                        <Link to='./ChurchRequestBoard'><Card className="the-cards">
-                            <Card.Img variant="top" src={requestBoard} />
-
-                        </Card>
-                        </Link>
-                    </Col>
-                    <Col className="fim" sm="3">
-                        <Link to='./About'>
-                            <Card className="the-cards">
-                                <Card.Img variant="top" src={about} />
+                        <hr className="my-1"></hr>
+                        <p id="jp" className="lead">
+                            If you would like to <Link to='./give'>give to those in need,</Link> In the Midst is a safe way to help your neighbors by partnering with the local Church.
+                            We can do this together!
+                        </p>
+                        <hr className="my-1"></hr>
+                        <p className="display-6 testimony">"COVID19 really affected our finances after my husband lost his job.
+                        We were living paycheck to paycheck and our kids stopped receiving free lunches from school. I was afraid to go out of the house because I didn't want
+                        to catch the Corona virus, especially because my elderly mother lives with us. Through "In the Midst", the Church stepped in to supply some our our needs.
+                        We are so grateful that the local Church stepped in to help!</p>
+                        <p className="lead">
+                            -Test User
+                        </p>
+                    </Jumbotron>
+                    <Row>
+                        <Col className="fim" sm="3">
+                            <Link to='./ChurchRequestBoard'><Card className="the-cards">
+                                <Card.Img variant="top" src={requestBoard} />
 
                             </Card>
-                        </Link>
-                    </Col>
+                            </Link>
+                        </Col>
+                        <Col className="fim" sm="3">
+                            <Link to='./About'>
+                                <Card className="the-cards">
+                                    <Card.Img variant="top" src={about} />
 
-                    <Col className="fim" sm="3">
-                        <Link to='./RequestHelpPage'>
-                            <Card className="the-cards">
-                                <Card.Img variant="top" src={needhelp} />
-                            </Card>
-                        </Link>
-                    </Col>
-                    <Col className="fim" sm="3">
-                        <Link to='./give'>
-                            <Card className="the-cards">
-                                <Card.Img variant="top" src={give} />
-                            </Card>
-                        </Link>
-                    </Col>
+                                </Card>
+                            </Link>
+                        </Col>
 
-                    <hr className="display-2"></hr>
+                        <Col className="fim" sm="3">
+                            <Link to='./RequestHelpPage'>
+                                <Card className="the-cards">
+                                    <Card.Img variant="top" src={needhelp} />
+                                </Card>
+                            </Link>
+                        </Col>
+                        <Col className="fim" sm="3">
+                            <Link to='./give'>
+                                <Card className="the-cards">
+                                    <Card.Img variant="top" src={give} />
+                                </Card>
+                            </Link>
+                        </Col>
 
-                    <Col className="info-cards" >
+                        <hr className="display-2"></hr>
 
-                        <div className="card text-left">
-                            <div class="card-body">
-                                <h4 class="card-title">3,184,513</h4>
-                                <p class="card-text">Items Received</p>
+                        <Col className="info-cards" >
+
+                            <div className="card text-left">
+                                <div class="card-body">
+                                    <h4 class="card-title">3,184,513</h4>
+                                    <p class="card-text">Items Received</p>
+                                </div>
                             </div>
-                        </div>
-                    </Col>
+                        </Col>
 
-                    <Col className="info-cards">
+                        <Col className="info-cards">
 
-                        <div className="card text-left">
+                            <div className="card text-left">
 
 
-                            <div class="card-body">
-                                <h4 class="card-title">1568</h4>
-                                <p class="card-text">Churches Involved</p>
+                                <div class="card-body">
+                                    <h4 class="card-title">1568</h4>
+                                    <p class="card-text">Churches Involved</p>
+                                </div>
                             </div>
-                        </div>
-                    </Col>
-                    <Col className="info-cards" >
-                        <div className="card text-left">
-                            <div class="card-body">
-                                <h4 class="card-title">131,489</h4>
-                                <p class="card-text">People Helped</p>
+                        </Col>
+                        <Col className="info-cards" >
+                            <div className="card text-left">
+                                <div class="card-body">
+                                    <h4 class="card-title">131,489</h4>
+                                    <p class="card-text">People Helped</p>
+                                </div>
                             </div>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
     );
 }

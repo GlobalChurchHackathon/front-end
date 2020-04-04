@@ -55,7 +55,7 @@ const Navigation = ({ auth: { isAuthenticated, loading }, logout }) => {
     return (
         // Conditional Navigation rendering
         <Navbar expand="lg" bg="dark" varient="dark">
-            <Navbar.Brand>
+            <Navbar.Brand className="navbarLogo">
                 <Link to='/'>
                     <Image src={logo} style={{ maxWidth: "100%", width: "300px", height: "auto", marginLeft: "-.5em" }}></Image>
                 </Link>
