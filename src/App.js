@@ -10,7 +10,8 @@ import ChurchRequestBoard from './components/views/ChurchRequestBoard'
 import About from './components/views/About';
 import Give from './components/views/Give';
 import Profile from './components/views/Profile';
-import Alert from './components/layouts/Alert'
+import Alert from './components/layouts/Alert';
+import Update from './components/assests/profile/Update';
 
 //redux
 import { Provider } from 'react-redux';
@@ -44,7 +45,8 @@ const App = () => (
             <Route exact path='/food' component={Food} />
             <Route exact path='/churchRequestBoard' component={ChurchRequestBoard} />
             <Route exact path='/give' component={Give} />
-            <Route exact path='/profile' component={Profile} />
+            <Route exact path='/profile' component={ Profile } />
+            <Route exact path='/update' component={ Update } />
           </Switch>
         </section>
         <Footer />
