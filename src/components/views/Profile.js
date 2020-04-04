@@ -14,7 +14,6 @@ const profile = (props) => {
                     <hr class="my-2"></hr>
                 </Jumbotron-fluid>
             </Row>
-
             <Container>
                 <Row>
                     <Col>

@@ -104,35 +104,30 @@ const Home = () => {
 
                     <Col className="info-cards" >
 
-                        <div class="card text-left">
-
+                        <div className="card text-left">
                             <div class="card-body">
                                 <h4 class="card-title">3,184,513</h4>
                                 <p class="card-text">Items Received</p>
-
                             </div>
                         </div>
                     </Col>
 
                     <Col className="info-cards">
 
-                        <div class="card text-left">
+                        <div className="card text-left">
+
 
                             <div class="card-body">
                                 <h4 class="card-title">1568</h4>
                                 <p class="card-text">Churches Involved</p>
-
                             </div>
                         </div>
                     </Col>
                     <Col className="info-cards" >
-
-                        <div class="card text-left">
-
+                        <div className="card text-left">
                             <div class="card-body">
                                 <h4 class="card-title">131,489</h4>
                                 <p class="card-text">People Helped</p>
-
                             </div>
                         </div>
                     </Col>
