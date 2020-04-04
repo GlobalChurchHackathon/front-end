@@ -16,6 +16,7 @@
     overflow: hidden;
     min-height:100vh;
     width:auto;
+    padding-top: 60px;
 }
 .the-cards{
     width: 10rem;
@@ -76,7 +77,7 @@
 }
 
 #jumbo{
-    margin-top: 86px;
+    margin-top: 0px;
     background-color: white;
     opacity: 70%;
 
@@ -108,3 +109,8 @@
   }
 };
 
+@media screen and (max-width: 425px){
+    .homeSlider{
+        margin-top: 150px;  
+    }
+}

@@ -5,7 +5,7 @@ import logo from '../assests/nav-logo.png';
 
 const Navigation = () => {
     return (
-        <Navbar expand="lg" bg="dark" varient="dark">
+        <Navbar expand="lg" bg="dark" variant="dark">
             <Navbar.Brand>
                 <Link to='/'>
                     <Image src={logo} style={{ maxWidth: "100%", width: "300px", height: "auto", marginLeft: "-.5em" }}></Image>
@@ -21,6 +21,7 @@ const Navigation = () => {
                     <Link to="/requestHelpPage">Need Help?</Link>
                     <Link to="/churchRequestBoard">Requests Board</Link>
                     <Link to="/give">Give</Link>
+                    <Link to="/profile">Profile</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
