@@ -131,10 +131,8 @@ const Home = () => {
                             </div>
                         </div>
                     </Col>
-
                 </Row>
             </Container>
-
         </div>
     );
 }

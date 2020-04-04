@@ -24,9 +24,9 @@ const Navigation = ({ auth: { isAuthenticated, loading }, logout }) => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
                     <Link to="/requestHelpPage">Get Help</Link>
                     <Link to="/give">Give</Link>
+                    <Link to="/about">About</Link>
                     <a onClick={logout} href='/'>
                         <span>Logout</span>
                     </a>
@@ -42,12 +42,12 @@ const Navigation = ({ auth: { isAuthenticated, loading }, logout }) => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/login">Login</Link>
-                    <Link to="/registerUser">Register</Link>
                     <Link to="/requestHelpPage">Get Help</Link>
                     <Link to="/give">Give</Link>
                     <Link to="/profile">Profile</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/registerUser">Register</Link>
+                    <Link to="/login">Login</Link>
                 </Nav>
             </Navbar.Collapse>
         </Fragment>
