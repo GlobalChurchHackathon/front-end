@@ -27,12 +27,11 @@ const Login = ({ login, isAthenticated }) => {
 
     return (
         <Fragment>
-            <Container fluid='sm' className="loginBody" style={{marginTop: "1.5em"}}>
-                 {/* added className to the container to make a page height in App.css */}
+            <Container fluid='sm' className="loginBody" style={{ marginTop: "1.5em" }}>
+                {/* added className to the container to make a page height in App.css */}
                 <Row>
                     <Col>
-                        <h1 className="large text-primary">Log In</h1>
-                        <p className="lead">Log in to your account</p>
+                        <h2 className="large text-primary">Log In</h2>
                         <form className="form" onSubmit={e => onSubmit(e)}>
                             <div className="form-group">
                                 <input type="email"
@@ -58,7 +57,7 @@ const Login = ({ login, isAthenticated }) => {
                                     required
                                 />
                             </div>
-                            <Link to='/profile'><input type="submit" className="btn btn-primary" value="Login"/></Link> 
+                            <Link to='/profile'><input type="submit" className="btn btn-primary" value="Login" /></Link>
                         </form>
                         <p className="my-1">
                             Don't have an account? <Link to='/registerUser'>Sign up</Link>
