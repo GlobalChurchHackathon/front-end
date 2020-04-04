@@ -16,6 +16,9 @@ const items = [
     },
     {
         id: 3,
+
+        //product: "vegetables"
+
         product: "Canned Goods"
     },
     {
@@ -30,6 +33,7 @@ const items = [
     {
         id: 6,
         product: "Bread"
+
     }
 ]
 const Food = (userToken) => {
@@ -43,7 +47,11 @@ const Food = (userToken) => {
     // }, [userToken])
 
     return (
+
+        //<div style={{ marginTop: '10%'}}>
+
         <div style={{ height: '200vh', paddingTop: '100px', paddingBottom: '100px' }}>
+
             <h1>Food</h1>
             <Table striped bordered hover>
                 <thead>
