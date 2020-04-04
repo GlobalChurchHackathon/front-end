@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Jumbotron, Card, CardDeck, Row } from 'react-bootstrap';
-import '../assests/about/about.css';
+import '../assests/give/give.css';
 import giveTen from '../assests/give/ten.png'
 import giveFifty from '../assests/give/fifty.png'
 import giveOneHundred from '../assests/give/oneHundred.png'
@@ -13,8 +13,8 @@ const Give = () => {
         <div id="give-body">
             <Container style={{marginBottom: '0'}}>
                 <Jumbotron style={{ background: "white", opacity: "70%", marginBottom: '0' }}>
-                    <h1 className="display-2 text-center">In the Midst</h1>
-                    <h1 className="display-3 text-center">...give to those in need</h1>
+                    <h1 className="display-2 text-center">Give to those in need</h1>
+                    {/* <h1 className="display-3 text-center">...give to those in need</h1> */}
                     <p style={{margin: '5%'}}>
                         We the people are the Church, and that is why we have committed to help those in need.
                         Jesus said "Love your neighbor as yourself. There is no greater commandment than this" -Mark 12:31.
